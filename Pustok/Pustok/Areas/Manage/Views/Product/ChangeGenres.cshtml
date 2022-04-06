@@ -1,0 +1,25 @@
+﻿@model List<Genre>
+@{
+    ViewData["Title"] = "ChangeGenres";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Genre item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<a class="btn btn-primary" asp-action="AddGenre">Add</a>
+
